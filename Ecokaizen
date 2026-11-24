@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#10283f">
+<title>ECO Kaizen | Tu empaque óptimo</title>
+<style>
+:root{--navy:#10283f;--green:#398b4a;--mint:#eaf2e9;--paper:#fbfcf9;--ink:#1b2b37;--muted:#66747d;--line:#e2e7e2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+.topbar{background:var(--navy);color:#dce8e9;font-size:10px;letter-spacing:.17em;text-transform:uppercase;text-align:center;padding:9px 14px}
+header{background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:Georgia,serif;font-size:26px;color:var(--navy);letter-spacing:-.02em}.logo b{color:var(--green);font-weight:600}
+.navlinks{display:flex;align-items:center;gap:24px;font-size:13px;font-weight:650;color:#455563}
+.nav-cta{background:var(--navy);color:#fff;border-radius:999px;padding:12px 20px}
+.hero{padding:62px 0;background:linear-gradient(115deg,#fbfcf9,#f1f4ef)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--green);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:800}
+.eyebrow:before{content:"";width:30px;height:1px;background:var(--green)}
+h1{font-family:Georgia,serif;font-size:clamp(40px,5.3vw,64px);line-height:1.04;letter-spacing:-.045em;color:var(--navy);font-weight:500;margin:22px 0 20px;max-width:570px}
+h1 em{color:var(--green);font-weight:400}
+.hero-copy{font-size:16px;line-height:1.75;color:#53616a;max-width:475px;margin:0 0 28px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:14px 22px;border-radius:5px;font-size:13px;font-weight:750;transition:.2s}
+.btn-primary{background:var(--green);color:#fff}.btn-primary:hover{background:#2f7440}
+.btn-secondary{border:1px solid #cbd4cc;color:var(--navy);background:#ffffff8c}
+.hero-note{margin-top:20px;color:#77837e;font-size:12px;line-height:1.6}
+.hero-visual{position:relative;min-height:360px;display:flex;align-items:center;justify-content:center}
+.ph{position:relative;background:linear-gradient(135deg,#dfe9dc,#c9dcc7);display:flex;align-items:center;justify-content:center;color:#5d7a62;font-size:12px;letter-spacing:.08em;text-align:center;padding:12px}
+.hero-photo{width:min(100%,480px);height:360px;border-radius:5px;box-shadow:0 26px 65px #182f2524}
+.photo-label{position:absolute;bottom:22px;left:-8px;background:var(--navy);color:#fff;padding:16px 22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.section{padding:76px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:28px}
+.kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:800}
+h2{font-family:Georgia,serif;color:var(--navy);font-size:clamp(32px,4vw,46px);font-weight:500;letter-spacing:-.035em;margin:12px 0 0}
+.section-intro{max-width:350px;color:var(--muted);font-size:14px;line-height:1.7;margin:0}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.product-card{background:#fff;border:1px solid var(--line);border-radius:5px;box-shadow:0 4px 18px rgba(16,40,63,.035);transition:transform .25s,box-shadow .25s}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(16,40,63,.10)}
+.product-card .ph{display:none}
+.product-copy{padding:19px 20px 22px}.product-copy h3{font-family:Georgia,serif;font-size:20px;font-weight:500;color:var(--navy);margin:0 0 8px}
+.product-copy p{font-size:13px;line-height:1.65;color:var(--muted);margin:0}
+.about{background:var(--mint);padding:64px 0}
+.about p{max-width:620px;color:#3f4f55;font-size:16px;line-height:1.75;margin:16px 0 0}
+.catalog-band{background:var(--navy);color:#fff;padding:54px 0}
+.catalog-inner,.social-inner{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.catalog-band .kicker{color:#a9d5a5}.catalog-band h2{color:#fff;max-width:600px}
+.catalog-band p{color:#c1cdd0;line-height:1.7;font-size:14px;max-width:520px;margin-bottom:0}
+.catalog-band .btn{background:#fff;color:var(--navy);white-space:nowrap}
+.social{padding:58px 0;background:#edf2eb}
+.social h2{font-size:34px}.social p{color:var(--muted);font-size:14px;line-height:1.7;max-width:460px}
+.social-links{display:flex;gap:10px;flex-wrap:wrap}
+.social-links a{border:1px solid #cbd8cc;background:#f9fbf7;padding:13px 18px;border-radius:5px;font-size:12px;font-weight:750;color:var(--navy)}
+.social-links a:hover{border-color:var(--green);color:var(--green)}
+footer{background:#0b1e30;color:#b9c6ca;padding:24px 0;font-size:11px;letter-spacing:.06em}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer-brand{color:#fff;font-weight:800;letter-spacing:.12em}
+.logo img{display:block;height:66px;width:auto;max-width:60vw}
+.hero-photo{height:auto!important;aspect-ratio:964/565;object-fit:cover}.cardimg{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:5px 5px 0 0}
+footer{background:#fff;color:#53616a;border-top:1px solid #e2e7e2;padding:52px 0 22px;font-size:14px;letter-spacing:0}.f-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid #dfe6df}.f-logo{display:inline-block}.f-logo img{display:block;height:58px;width:auto}.f-brand p{margin:16px 0 0;line-height:1.7;max-width:340px;color:#53616a}.f-brand .f-cities{margin-top:8px;color:#398b4a;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}.f-col h4{margin:0 0 14px;color:#10283f;font-size:12px;letter-spacing:.16em;text-transform:uppercase}.f-col a{display:block;color:#53616a;padding:6px 0}.f-col a:hover{color:#398b4a}.f-bottom{display:flex;justify-content:space-between;gap:16px;padding-top:20px;font-size:12px;color:#77837e}@media(max-width:800px){.f-top{grid-template-columns:1fr 1fr}.f-brand{grid-column:1/-1}}@media(max-width:520px){.f-bottom{flex-direction:column}}
+.social-links a{display:inline-flex;align-items:center;gap:10px;padding:8px 20px 8px 8px;border-radius:999px;background:#fff;border:1px solid #d5e0d5;font-size:13px;font-weight:700;color:#10283f;transition:.2s}.social-links a:hover{border-color:#398b4a;color:#398b4a;transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,40,63,.08)}.social-links .ic{width:36px;height:36px;border-radius:50%;background:#10283f;display:flex;align-items:center;justify-content:center;transition:.2s}.social-links .ic svg{width:17px;height:17px;fill:#fff}.social-links a:hover .ic{background:#398b4a}@media(max-width:520px){.social-links a{justify-content:center}}
+a:focus-visible{outline:3px solid #82b88a;outline-offset:4px}
+@media(max-width:800px){.hero{padding:48px 0 42px}.hero-grid{grid-template-columns:1fr;gap:26px}.hero-visual{min-height:285px}.hero-photo{height:285px;width:92%}.photo-label{left:0;bottom:12px}.section{padding:58px 0}.products{grid-template-columns:repeat(2,1fr)}.catalog-inner,.social-inner{align-items:flex-start;flex-direction:column}.navlinks a:not(.nav-cta){display:none}}
+@media(max-width:520px){.wrap{width:min(100% - 30px,1120px)}.topbar{font-size:9px;letter-spacing:.1em}.nav{height:68px}.logo img{height:54px}.nav-cta{font-size:11px;padding:10px 13px}h1{font-size:42px}.hero-copy{font-size:14px}.actions{display:grid}.btn{width:100%}.hero-visual{min-height:235px}.hero-photo{height:235px;width:100%}.section-head{display:block}.section-intro{margin-top:14px}.products{grid-template-columns:1fr}.footer-inner{align-items:flex-start;flex-direction:column}.social-links a{flex:1;text-align:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol><symbol id="i-fb" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol><symbol id="i-pi" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></symbol></svg>
+<div class="topbar">Soluciones de empaque para negocios que quieren destacar</div>
+<header><div class="wrap nav">
+  <a class="logo" href="#inicio" aria-label="ECO Kaizen, inicio"><img src="img/logo.png" alt="ECO Kaizen - Tu empaque óptimo"></a>
+  <nav class="navlinks" aria-label="Navegación"><a href="#productos">Productos</a><a href="#marca">Conócenos</a><a class="nav-cta" href="https://wa.me/c/51995216311" target="_blank" rel="noopener">Ver catálogo ↗</a></nav>
+</div></header>
+<main id="inicio">
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <h1>Empaques que hacen <em>destacar</em> tu negocio.</h1>
+    <p class="hero-copy">Envases y empaques para presentar, proteger y entregar tus productos con una imagen que habla bien de tu negocio.</p>
+    <div class="actions"><a class="btn btn-primary" href="https://whatsapp.com/channel/0029VbDnWvzCcW4oZJBprM1G" target="_blank" rel="noopener">Ver productos en el canal <span>↗</span></a><a class="btn btn-secondary" href="https://wa.me/message/23AP7FZWPHX7M1" target="_blank" rel="noopener">Hablar con nosotros</a></div>
+    <div class="hero-note">Atención directa · Chiclayo<br>Catálogo actualizado en WhatsApp</div>
+  </div>
+  <div class="hero-visual"><img class="hero-photo" src="img/hero.jpg" alt="Empaques ECO Kaizen para alimentos"></div>
+</div></section>
+
+<section class="section" id="productos"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">Productos</div><h2>Lo que tu negocio necesita</h2></div><div><p class="section-intro">Productos, ofertas y novedades</p><p style="margin:14px 0 0"><a class="btn btn-primary" href="https://whatsapp.com/channel/0029VbDnWvzCcW4oZJBprM1G" target="_blank" rel="noopener">Únete al canal <span>↗</span></a></p></div></div>
+  <div class="products">
+    <article class="product-card"><img class="cardimg" src="img/vasos.jpg" alt="Vasos" loading="lazy"><div class="product-copy"><h3>Vasos</h3><p>Para bebidas frías y calientes en tu local o para llevar.</p></div></article>
+    <article class="product-card"><img class="cardimg" src="img/envases.jpg" alt="Envases y platos" loading="lazy"><div class="product-copy"><h3>Envases y platos</h3><p>Incluye botellas PET y envases para presentar y entregar tus productos.</p></div></article>
+    <article class="product-card"><img class="cardimg" src="img/cubiertos.jpg" alt="Cubiertos y sorbetes" loading="lazy"><div class="product-copy"><h3>Cubiertos y sorbetes</h3><p>El complemento de cada pedido, listo para entregar.</p></div></article>
+    <article class="product-card"><img class="cardimg" src="img/bolsas.jpg" alt="Bolsas y film" loading="lazy"><div class="product-copy"><h3>Bolsas y film</h3><p>Para empacar, proteger y conservar.</p></div></article>
+    <article class="product-card"><img class="cardimg" src="img/guantes.jpg" alt="Guantes" loading="lazy"><div class="product-copy"><h3>Guantes</h3><p>Para manipular alimentos con higiene.</p></div></article>
+  </div>
+</div></section>
+
+<section class="about" id="marca"><div class="wrap">
+  <div class="kicker">Conócenos</div>
+  <h2>Empaques para restaurantes y negocios</h2>
+  <p>Distribuimos empaques descartables al por mayor para restaurantes, negocios locales y compradores de provincia. Atendemos en Chiclayo.</p>
+</div></section>
+
+<section class="catalog-band"><div class="wrap catalog-inner">
+  <div><div class="kicker">Catálogo</div><h2>Mira todo el catálogo en WhatsApp</h2><p>Productos y presentaciones siempre actualizados.</p></div>
+  <a class="btn" href="https://wa.me/c/51995216311" target="_blank" rel="noopener">Abrir catálogo ↗</a>
+</div></section>
+
+<section class="social"><div class="wrap social-inner">
+  <div><h2>Síguenos</h2><p>Mira novedades y productos en nuestras redes.</p></div>
+  <div class="social-links"><a href="https://whatsapp.com/channel/0029VbDnWvzCcW4oZJBprM1G" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></span>Canal de WhatsApp</a><a href="https://wa.me/message/23AP7FZWPHX7M1" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></span>WhatsApp</a><a href="https://www.facebook.com/ecokaizenbiodegradables/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-fb"/></svg></span>Facebook</a><a href="https://pin.it/3nzMcOv4C" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pi"/></svg></span>Pinterest</a></div>
+</div></section>
+</main>
+<footer><div class="wrap"><div class="f-top"><div class="f-brand"><span class="f-logo"><img id="fl" alt="ECO Kaizen - Tu empaque óptimo"></span><p>Empaques y descartables al por mayor para restaurantes, negocios y compradores de provincia.</p><p class="f-cities">Chiclayo</p></div><div class="f-col"><h4>Explora</h4><a href="#productos">Productos</a><a href="#marca">Conócenos</a><a href="https://wa.me/c/51995216311" target="_blank" rel="noopener">Catálogo de WhatsApp</a></div><div class="f-col"><h4>Contacto</h4><a href="https://wa.me/message/23AP7FZWPHX7M1" target="_blank" rel="noopener">WhatsApp</a><a href="https://whatsapp.com/channel/0029VbDnWvzCcW4oZJBprM1G" target="_blank" rel="noopener">Canal de WhatsApp</a><a href="https://www.facebook.com/ecokaizenbiodegradables/" target="_blank" rel="noopener">Facebook</a><a href="https://pin.it/3nzMcOv4C" target="_blank" rel="noopener">Pinterest</a></div></div><div class="f-bottom"><span>© 2026 ECO Kaizen</span></div></div></footer>
+<script>var a=document.querySelector('.logo img'),b=document.getElementById('fl');if(a&&b)b.src=a.src;</script>
+</body>
+</html>
